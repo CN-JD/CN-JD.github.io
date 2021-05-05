@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -24,7 +24,7 @@
 <meta property="og:title" content="Junyo | 博客">
 <meta property="og:url" content="https://cn-jd.github.io/index.html">
 <meta property="og:site_name" content="Junyo | 博客">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Junyo">
 <meta name="twitter:card" content="summary">
 
@@ -37,7 +37,7 @@
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -81,7 +81,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -110,17 +110,17 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-categories">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>الوسوم</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -149,7 +149,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/05/Hexo-%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -172,10 +172,23 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="أُنشأ: 2021-05-05 14:05:36 / عُدل: 22:54:06" itemprop="dateCreated datePublished" datetime="2021-05-05T14:05:36+08:00">2021-05-05</time>
+              <time title="创建时间：2021-05-05 14:05:36 / 修改时间：23:44:32" itemprop="dateCreated datePublished" datetime="2021-05-05T14:05:36+08:00">2021-05-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+                </span>
             </span>
 
           
@@ -219,7 +232,7 @@
 </li>
 </ol>
 <p>初始化后的目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    # 配置文件</span><br><span class="line">├── package.json   # 应用配置信息</span><br><span class="line">├── scaffolds      # 模板</span><br><span class="line">├── source			# 资源文件</span><br><span class="line">|   ├── _drafts    # 草稿文件夹</span><br><span class="line">|   └── _posts		# 文章都会存在这里</span><br><span class="line">└── themes			# 主题文件夹</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    # 配置文件</span><br><span class="line">├── package.json   # 应用配置信息</span><br><span class="line">├── scaffolds      # 模板</span><br><span class="line">├── source         # 资源文件</span><br><span class="line">|   ├── _drafts    # 草稿文件夹</span><br><span class="line">|   └── _posts     # 文章都会存在这里</span><br><span class="line">└── themes         # 主题文件夹</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>命令 <code>hexo g</code>  会 生成 public 目录，其用于存放静态网页文件资源</p>
@@ -272,7 +285,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;Hexo 入门&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p> <code>source/_posts</code> 路径便会生成一个 <code>Hexo 入门.md</code> 文件：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 入门			   # 标题</span><br><span class="line">date: 2021-05-05 14:05:36	# 建立日期</span><br><span class="line">tags: [Hexo, 博客]		   # 标签</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># 文章内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 入门           # 标题</span><br><span class="line">date: 2021-05-05 14:05:36  # 建立日期</span><br><span class="line">tags: [Hexo, 博客]         # 标签</span><br><span class="line">categories:                # 分类</span><br><span class="line"><span class="bullet">  -</span> 前端</span><br><span class="line"><span class="bullet">  -</span> Node.js</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section"># 文章内容</span></span><br></pre></td></tr></table></figure>
 
 <p>重新部署：</p>
 <ul>
@@ -296,17 +309,14 @@
 <li>hexo s</li>
 </ul>
 <p>访问网址 <a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a> </p>
-<blockquote>
-<p>更多 NexT 主题设置查看 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7951e239ae04">NexT主题教程</a></p>
-</blockquote>
 <h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>如果是在本地才能浏览到自己的博客，好像也没什么意思，但好在 Hexo 属于静态网页部署，无需服务器就可以在免费的静态网址托管平台上部署，利用 Github、Gitee、Goding 等</p>
-<p><strong>准备</strong></p>
 <blockquote>
 <p>请确保当前网络环境可以正常访问 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></p>
 </blockquote>
+<p><strong>准备</strong></p>
 <p>首先确认你已经有一个 <a target="_blank" rel="noopener" href="https://github.com/login">Github账号</a></p>
 <ul>
-<li><p>新建一个 [仓库](<a target="_blank" rel="noopener" href="https://github.com/new">Create a New Repository (github.com)</a>) ，仓库命名规则为你的 <strong>用户名.github.io</strong> ，点击 <strong>create repository</strong> 即可</p>
+<li><p>新建一个 <a target="_blank" rel="noopener" href="https://github.com/new">仓库</a> ，仓库命名规则为你的 <strong>用户名.github.io</strong> ，点击 <strong>create repository</strong> 即可</p>
 </li>
 <li><p>跳转到新页面后，复制以 <code>.git</code> 结尾的仓库地址</p>
 </li>
@@ -327,9 +337,6 @@
 </li>
 </ul>
 <p><strong>正常访问即部署成功</strong></p>
-<blockquote>
-<p>成功后修改  <code>_config.yml </code>  文件中的 <code>url: https://你的用户名.github.io</code></p>
-</blockquote>
 <h3 id="部署到码云（Gitee）"><a href="#部署到码云（Gitee）" class="headerlink" title="部署到码云（Gitee）"></a><del>部署到码云（Gitee）</del></h3><p>净网行动，目前无法使用码云部署 Hexo 进行访问</p>
 <p><del><strong>准备</strong></del></p>
 <p><del>首先确认你已经有一个 <a target="_blank" rel="noopener" href="https://gitee.com/">码云账号</a></del> </p>
@@ -442,10 +449,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
@@ -465,12 +472,19 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -507,7 +521,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Junyo</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
