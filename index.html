@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-05 14:05:36 / 修改时间：22:00:01" itemprop="dateCreated datePublished" datetime="2021-05-05T14:05:36+08:00">2021-05-05</time>
+              <time title="创建时间：2021-05-05 14:05:36 / 修改时间：22:23:01" itemprop="dateCreated datePublished" datetime="2021-05-05T14:05:36+08:00">2021-05-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -197,9 +197,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>无需服务器，可以利用 github、gitee（码云）等托管在互联网中，实现网上部署自己的博客</p>
-<p>例如你所看到的这个博客网址</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="%5BHexo%5D(https://hexo.io/zh-cn/)">Hexo</a> 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>无需服务器，可以利用 Github、Gitee（码云）等托管在互联网中，实现网上部署自己的博客</p>
+<p>例如你所看到的这个<a target="_blank" rel="noopener" href="https://cn-jd.github.io/">博客网址</a></p>
 <h2 id="入门篇"><a href="#入门篇" class="headerlink" title="入门篇"></a>入门篇</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
 <li>Node.js</li>
 <li>Git</li>
@@ -227,7 +227,7 @@
 </li>
 </ol>
 <p>初始化后的目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    # 配置文件</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source			# 资源文件</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts		# 文章都会存在这里</span><br><span class="line">└── themes			# 主题文件夹</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    # 配置文件</span><br><span class="line">├── package.json   # 应用配置信息</span><br><span class="line">├── scaffolds      # 模板</span><br><span class="line">├── source			# 资源文件</span><br><span class="line">|   ├── _drafts    # 草稿文件夹</span><br><span class="line">|   └── _posts		# 文章都会存在这里</span><br><span class="line">└── themes			# 主题文件夹</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>命令 <code>hexo g</code>  会 生成 public 目录，其用于存放静态网页文件资源</p>
@@ -270,6 +270,12 @@
 <td align="left"><code>Asia/Shanghai</code></td>
 </tr>
 </tbody></table>
+<p>重新部署：</p>
+<ul>
+<li>hexo g</li>
+<li>hexo s</li>
+</ul>
+<p>访问网址 <a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a> </p>
 <h2 id="进阶篇"><a href="#进阶篇" class="headerlink" title="进阶篇"></a>进阶篇</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>博客目录下执行命令 <code>hexo new &quot;&lt;article&gt;&quot;</code>  ，例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;Hexo 入门&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -298,14 +304,14 @@
 <li>hexo s</li>
 </ul>
 <p>访问网址 <a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a> </p>
-<h3 id="部署到-github"><a href="#部署到-github" class="headerlink" title="部署到 github"></a>部署到 github</h3><p>如果是在本地才能浏览到自己的博客，好像也没什么意思，但好在 Hexo 属于静态网页部署，无需服务器就可以在免费的静态网址托管平台上部署，利用 Github、Gitee、Goding 等</p>
+<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>如果是在本地才能浏览到自己的博客，好像也没什么意思，但好在 Hexo 属于静态网页部署，无需服务器就可以在免费的静态网址托管平台上部署，利用 Github、Gitee、Goding 等</p>
 <blockquote>
 <p>请确保当前网络环境可以正常访问 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></p>
 </blockquote>
 <p><strong>准备</strong></p>
-<p>首先确认你已经有一个 <a target="_blank" rel="noopener" href="https://github.com/login">github账号</a></p>
+<p>首先确认你已经有一个 <a target="_blank" rel="noopener" href="https://github.com/login">Github账号</a></p>
 <ul>
-<li><p>新建一个 <a target="_blank" rel="noopener" href="https://github.com/new">仓库</a> ，仓库命名规则为你的 <strong>用户名.github.io</strong> ，点击 <strong>create repository</strong> 即可</p>
+<li><p>新建一个 [仓库](<a target="_blank" rel="noopener" href="https://github.com/new">Create a New Repository (github.com)</a>) ，仓库命名规则为你的 <strong>用户名.github.io</strong> ，点击 <strong>create repository</strong> 即可</p>
 </li>
 <li><p>跳转到新页面后，复制以 <code>.git</code> 结尾的仓库地址</p>
 </li>
@@ -379,7 +385,7 @@
 </li>
 </ul>
 <p>再次新建文章或者更新文章时， <code>hexo d</code> 就十分轻松了</p>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2>
+
       
     </div>
 
