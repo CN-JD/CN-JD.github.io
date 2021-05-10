@@ -150,6 +150,254 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/10/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Junyo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Junyo | 博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/10/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" class="post-title-link" itemprop="url">Python 学习笔记（六）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-10 10:30:59 / 修改时间：11:53:48" itemprop="dateCreated datePublished" datetime="2021-05-10T10:30:59+08:00">2021-05-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>函数是带名字的代码块，用于完成具体的工作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span>	函数名(<span class="params">..形参</span>):</span></span><br><span class="line">	函数体</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数调用</span></span><br><span class="line">函数名(..实参)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">name, age</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;Your name is &quot;</span> + name + <span class="string">&quot; and your age is &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="传递实参"><a href="#传递实参" class="headerlink" title="传递实参"></a>传递实参</h3><p>当函数定义中包含多个形参，在函数调用时也可能要包含多个实参</p>
+<p><strong>位置实参</strong>：基于实参的顺序关联形参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>, <span class="number">18</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tom <span class="keyword">and</span> your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>调用中实参的顺序与函数定义中形参的顺序要一致</p>
+</blockquote>
+<p><strong>关键字实参</strong>：实参传递键值对</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(age=<span class="number">18</span>, name=<span class="string">&quot;Tom&quot;</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>必须准确地指定函数定义中的形参名</p>
+</blockquote>
+<p><strong>默认值</strong>：在函数定义时，形参可以指定默认值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> show</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">name, age=<span class="number">1</span></span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;Your name is &quot;</span> + name + <span class="string">&quot;and your age is &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">1.</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>, <span class="number">18</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多个形参中有一个形参指定默认值，其后面的形参也必须指定默认值</p>
+</blockquote>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>Python 使用 <strong>return</strong> 语句将值返回到调用函数的代码行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">sum</span>(<span class="params">a, b</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> a + b</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">sum</span>(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h3><p>利用 <code>*形参</code> 可以传递任意个实参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">*toppings</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line">(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>结合使用位置实参和任意数量实参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">size, *toppings</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="built_in">str</span>(size), end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line"><span class="number">12</span>:(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>使用任意数量的关键字实参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">name, size, *toppings</span>):</span></span><br><span class="line">...		<span class="built_in">print</span>(name, end=<span class="string">&quot;:&quot;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="built_in">str</span>(size), end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(size = <span class="number">12</span>, name = <span class="string">&#x27;Tom&#x27;</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line">Tom:<span class="number">12</span>:(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="将函数存储在模块"><a href="#将函数存储在模块" class="headerlink" title="将函数存储在模块"></a>将函数存储在模块</h3><p>函数存储在被称为模块的独立文件中，再将模块的函数导 入到主程序中调用</p>
+<ul>
+<li><p>导入整个模块</p>
+<p>使用 <code>import 模块名</code> 导入模块，可以调用模块中所有函数</p>
+<p><code>pizza.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">size, *toppings</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nMaking a &quot;</span> + <span class="built_in">str</span>(size) + <span class="string">&quot;-inch pizza with the following toppings:&quot;</span>)</span><br><span class="line">	<span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;- &quot;</span> + topping)</span><br></pre></td></tr></table></figure>
+
+<p><code>making_pizzas.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入模块</span></span><br><span class="line"><span class="keyword">import</span> pizza</span><br><span class="line"></span><br><span class="line">pizza.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">pizza.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>导入特定函数</p>
+<p>使用 <code>from 模块名 import 函数名, 函数名 </code> 导入函数，可以调用模块部分特定函数</p>
+<p><code>making_pizzas2.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> make_pizza</span><br><span class="line"></span><br><span class="line">pizza.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">pizza.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 <code>as</code> 给函数指定别名</p>
+<p>如果要导入的函数名与程序中现有函数名的冲突，可利用 <code>as</code> 指定函数的别名</p>
+<p><code>making_pizzas3.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> make_pizza <span class="keyword">as</span> mp</span><br><span class="line"></span><br><span class="line">mp(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">mp(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>导入模块中的所有函数</p>
+<p>使用 <code>from 模块名 import *</code>  复制模块所有函数到程序中，直接使用，无需在使用 <code>模块名.函数名</code> 调用</p>
+<p><code>making_pizzas4.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> *</span><br><span class="line">make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="函数编写指北"><a href="#函数编写指北" class="headerlink" title="函数编写指北"></a>函数编写指北</h3><ul>
+<li><p>函数名且只使用小写字母和下划线</p>
+</li>
+<li><p>函数定义后面应包含简要地阐述其功能的注释</p>
+</li>
+<li><p>给形参指定默认值和使用关键字实参时，等号两边不要有空格</p>
+</li>
+<li><p>代码行的长度不要超过79字</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Junyo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Junyo | 博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/" class="post-title-link" itemprop="url">Python 学习笔记（五）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-09 20:37:49 / 修改时间：22:04:39" itemprop="dateCreated datePublished" datetime="2021-05-09T20:37:49+08:00">2021-05-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><h3 id="input-获取字符串输入"><a href="#input-获取字符串输入" class="headerlink" title="input() 获取字符串输入"></a>input() 获取字符串输入</h3><p>使用函数 <code>input()</code> 接收用户的输入</p>
+<p>函数 <code>input()</code> 接受一个参数：即要向用户显示的提示或说明</p>
+<p>函数 <code>input()</code> 将用户输入解读为字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 没有提示消息</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="built_in">input</span>()</span><br><span class="line">hello</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message</span><br><span class="line"><span class="string">&#x27;hello&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有提示消息</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="built_in">input</span>(<span class="string">&quot;Please input message: &quot;</span>)</span><br><span class="line">Please <span class="built_in">input</span> message: hello world</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message</span><br><span class="line"><span class="string">&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Python 2.7 中利用 <code>raw_input()</code> 用来提示用户输入</p>
+</blockquote>
+<h3 id="int-转换为数值"><a href="#int-转换为数值" class="headerlink" title="int() 转换为数值"></a>int() 转换为数值</h3><p>使用函数 <code>int()</code> 可将一个字符串格式的数值转换为整型的数值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;How old are you?&#x27;</span>))</span><br><span class="line">How old are you? 18</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>age + <span class="number">3</span></span><br><span class="line"><span class="number">21</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="While-循环"><a href="#While-循环" class="headerlink" title="While 循环"></a>While 循环</h2><p><code>for</code> 循环用于针对集合中的每个元素都一个代码块，而 <code>while</code> 循环不断地运行，直到指定的条<br>件不满足为止</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>num = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">while</span> num &lt;= <span class="number">5</span>:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(num, end=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="meta">... </span>    num += <span class="number">1</span></span><br><span class="line">...</span><br><span class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="break-退出循环"><a href="#break-退出循环" class="headerlink" title="break 退出循环"></a>break 退出循环</h3><p>在任何Python循环中都可使用break语句。例如，可使用break语句来退出遍历列表或字典 的for循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>num = <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">if</span> a[num] == <span class="number">3</span>:</span><br><span class="line"><span class="meta">... </span>            <span class="keyword">break</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(a[num])</span><br><span class="line"><span class="meta">... </span>    num += <span class="number">1</span></span><br><span class="line">...</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p>返回到循环开头，并根据条件测试结果决定是否继续执行循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>current_number = <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">while</span> current_number &lt; <span class="number">10</span>:</span><br><span class="line"><span class="meta">... </span>    current_number += <span class="number">1</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">if</span> current_number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line"><span class="meta">... </span>            <span class="keyword">continue</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(current_number)</span><br><span class="line">...</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="删除包含特定值的所有列表元素"><a href="#删除包含特定值的所有列表元素" class="headerlink" title="删除包含特定值的所有列表元素"></a>删除包含特定值的所有列表元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span> = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;b&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">while</span> <span class="string">&#x27;b&#x27;</span> <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">list</span>.remove(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">list</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -421,7 +669,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-09 09:51:16 / 修改时间：17:09:16" itemprop="dateCreated datePublished" datetime="2021-05-09T09:51:16+08:00">2021-05-09</time>
+              <time title="创建时间：2021-05-09 09:51:16 / 修改时间：21:26:26" itemprop="dateCreated datePublished" datetime="2021-05-09T09:51:16+08:00">2021-05-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -793,7 +1041,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -812,7 +1060,7 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/jd-cn" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jd-cn" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/cn-jd" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cn-jd" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
   </div>
 
