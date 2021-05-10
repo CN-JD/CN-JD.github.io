@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/10/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/10/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/05/10/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" class="post-title-link" itemprop="url">Python 学习笔记（六）</a>
+            <a href="/2021/05/10/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/" class="post-title-link" itemprop="url">Python 学习笔记（六）</a>
         </h2>
 
         <div class="post-meta">
@@ -175,7 +175,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-10 10:30:59 / 修改时间：11:53:48" itemprop="dateCreated datePublished" datetime="2021-05-10T10:30:59+08:00">2021-05-10</time>
+              <time title="创建时间：2021-05-10 10:30:59 / 修改时间：11:55:19" itemprop="dateCreated datePublished" datetime="2021-05-10T10:30:59+08:00">2021-05-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,77 +206,14 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span>	函数名(<span class="params">..形参</span>):</span></span><br><span class="line">	函数体</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数调用</span></span><br><span class="line">函数名(..实参)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">name, age</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;Your name is &quot;</span> + name + <span class="string">&quot; and your age is &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;.&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="传递实参"><a href="#传递实参" class="headerlink" title="传递实参"></a>传递实参</h3><p>当函数定义中包含多个形参，在函数调用时也可能要包含多个实参</p>
-<p><strong>位置实参</strong>：基于实参的顺序关联形参</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>, <span class="number">18</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tom <span class="keyword">and</span> your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>调用中实参的顺序与函数定义中形参的顺序要一致</p>
-</blockquote>
-<p><strong>关键字实参</strong>：实参传递键值对</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(age=<span class="number">18</span>, name=<span class="string">&quot;Tom&quot;</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>必须准确地指定函数定义中的形参名</p>
-</blockquote>
-<p><strong>默认值</strong>：在函数定义时，形参可以指定默认值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> show</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">name, age=<span class="number">1</span></span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;Your name is &quot;</span> + name + <span class="string">&quot;and your age is &quot;</span> + <span class="built_in">str</span>(age) + <span class="string">&quot;.&quot;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">1.</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>show(<span class="string">&quot;Tom&quot;</span>, <span class="number">18</span>)</span><br><span class="line">Your name <span class="keyword">is</span> Tomand your age <span class="keyword">is</span> <span class="number">18.</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>多个形参中有一个形参指定默认值，其后面的形参也必须指定默认值</p>
-</blockquote>
-<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>Python 使用 <strong>return</strong> 语句将值返回到调用函数的代码行</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">sum</span>(<span class="params">a, b</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> a + b</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">sum</span>(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h3><p>利用 <code>*形参</code> 可以传递任意个实参</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">*toppings</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line">(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li><p>结合使用位置实参和任意数量实参</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">size, *toppings</span>):</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="built_in">str</span>(size), end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line"><span class="number">12</span>:(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用任意数量的关键字实参</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">name, size, *toppings</span>):</span></span><br><span class="line">...		<span class="built_in">print</span>(name, end=<span class="string">&quot;:&quot;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="built_in">str</span>(size), end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(toppings)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>make_pizza(size = <span class="number">12</span>, name = <span class="string">&#x27;Tom&#x27;</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br><span class="line">Tom:<span class="number">12</span>:(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="将函数存储在模块"><a href="#将函数存储在模块" class="headerlink" title="将函数存储在模块"></a>将函数存储在模块</h3><p>函数存储在被称为模块的独立文件中，再将模块的函数导 入到主程序中调用</p>
-<ul>
-<li><p>导入整个模块</p>
-<p>使用 <code>import 模块名</code> 导入模块，可以调用模块中所有函数</p>
-<p><code>pizza.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_pizza</span>(<span class="params">size, *toppings</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nMaking a &quot;</span> + <span class="built_in">str</span>(size) + <span class="string">&quot;-inch pizza with the following toppings:&quot;</span>)</span><br><span class="line">	<span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;- &quot;</span> + topping)</span><br></pre></td></tr></table></figure>
-
-<p><code>making_pizzas.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入模块</span></span><br><span class="line"><span class="keyword">import</span> pizza</span><br><span class="line"></span><br><span class="line">pizza.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">pizza.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p>导入特定函数</p>
-<p>使用 <code>from 模块名 import 函数名, 函数名 </code> 导入函数，可以调用模块部分特定函数</p>
-<p><code>making_pizzas2.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> make_pizza</span><br><span class="line"></span><br><span class="line">pizza.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">pizza.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用 <code>as</code> 给函数指定别名</p>
-<p>如果要导入的函数名与程序中现有函数名的冲突，可利用 <code>as</code> 指定函数的别名</p>
-<p><code>making_pizzas3.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> make_pizza <span class="keyword">as</span> mp</span><br><span class="line"></span><br><span class="line">mp(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">mp(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p>导入模块中的所有函数</p>
-<p>使用 <code>from 模块名 import *</code>  复制模块所有函数到程序中，直接使用，无需在使用 <code>模块名.函数名</code> 调用</p>
-<p><code>making_pizzas4.py</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> *</span><br><span class="line">make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="函数编写指北"><a href="#函数编写指北" class="headerlink" title="函数编写指北"></a>函数编写指北</h3><ul>
-<li><p>函数名且只使用小写字母和下划线</p>
-</li>
-<li><p>函数定义后面应包含简要地阐述其功能的注释</p>
-</li>
-<li><p>给形参指定默认值和使用关键字实参时，等号两边不要有空格</p>
-</li>
-<li><p>代码行的长度不要超过79字</p>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/10/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
