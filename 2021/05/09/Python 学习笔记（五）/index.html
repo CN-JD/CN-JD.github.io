@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"cn-jd.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="用户输入input() 获取字符串输入使用函数 input() 接收用户的输入 函数 input() 接受一个参数：即要向用户显示的提示或说明 函数 input() 将用户输入解读为字符串 1234567891011# 没有提示消息&gt;&gt;&gt; message &#x3D; input()hello&gt;&gt;&gt; message&amp;#x27;hello&amp;#x27;# 有提示消息&gt;&amp;">
+  <meta name="description" content="用户输入input() 获取字符串输入使用函数 input() 接收用户的输入 函数 input() 接受一个参数：即要向用户显示的提示或说明 函数 input() 将用户输入解读为字符串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 学习笔记（五）">
 <meta property="og:url" content="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/index.html">
 <meta property="og:site_name" content="Junyo | 博客">
-<meta property="og:description" content="用户输入input() 获取字符串输入使用函数 input() 接收用户的输入 函数 input() 接受一个参数：即要向用户显示的提示或说明 函数 input() 将用户输入解读为字符串 1234567891011# 没有提示消息&gt;&gt;&gt; message &#x3D; input()hello&gt;&gt;&gt; message&amp;#x27;hello&amp;#x27;# 有提示消息&gt;&amp;">
+<meta property="og:description" content="用户输入input() 获取字符串输入使用函数 input() 接收用户的输入 函数 input() 接受一个参数：即要向用户显示的提示或说明 函数 input() 将用户输入解读为字符串">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-09T12:37:49.000Z">
-<meta property="article:modified_time" content="2021-05-09T14:04:39.929Z">
+<meta property="article:modified_time" content="2021-05-11T03:43:09.723Z">
 <meta property="article:author" content="Junyo">
 <meta property="article:tag" content="Python 学习笔记">
 <meta name="twitter:card" content="summary">
@@ -178,10 +178,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-05-09 20:37:49 / 修改时间：22:04:39" itemprop="dateCreated datePublished" datetime="2021-05-09T20:37:49+08:00">2021-05-09</time>
+              <time title="创建时间：2021-05-09 20:37:49" itemprop="dateCreated datePublished" datetime="2021-05-09T20:37:49+08:00">2021-05-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-11 11:43:09" itemprop="dateModified" datetime="2021-05-11T11:43:09+08:00">2021-05-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -210,6 +216,8 @@
         <h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><h3 id="input-获取字符串输入"><a href="#input-获取字符串输入" class="headerlink" title="input() 获取字符串输入"></a>input() 获取字符串输入</h3><p>使用函数 <code>input()</code> 接收用户的输入</p>
 <p>函数 <code>input()</code> 接受一个参数：即要向用户显示的提示或说明</p>
 <p>函数 <code>input()</code> 将用户输入解读为字符串</p>
+<span id="more"></span>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 没有提示消息</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="built_in">input</span>()</span><br><span class="line">hello</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message</span><br><span class="line"><span class="string">&#x27;hello&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有提示消息</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="built_in">input</span>(<span class="string">&quot;Please input message: &quot;</span>)</span><br><span class="line">Please <span class="built_in">input</span> message: hello world</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>message</span><br><span class="line"><span class="string">&#x27;hello world&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -336,7 +344,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
