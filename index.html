@@ -150,6 +150,494 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/12/Python%E5%BF%AB%E9%80%9F%E5%8F%82%E8%80%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Junyo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Junyo | 博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/12/Python%E5%BF%AB%E9%80%9F%E5%8F%82%E8%80%83/" class="post-title-link" itemprop="url">Python 快速参考</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-12 23:37:33 / 修改时间：23:38:39" itemprop="dateCreated datePublished" datetime="2021-05-12T23:37:33+08:00">2021-05-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="数字计算"><a href="#数字计算" class="headerlink" title="数字计算"></a>数字计算</h2><h3 id="数值运算符"><a href="#数值运算符" class="headerlink" title="数值运算符"></a>数值运算符</h3><table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">加</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">乘</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">浮点除</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td align="center">指数</td>
+</tr>
+<tr>
+<td align="center">abs()</td>
+<td align="center">绝对值</td>
+</tr>
+<tr>
+<td align="center">//</td>
+<td align="center">整数除</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">取余</td>
+</tr>
+</tbody></table>
+<h3 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h3><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">range(stop)</td>
+<td align="center">返回从 0 到 stop − 1 的整数列表</td>
+</tr>
+<tr>
+<td align="center">range(start, stop)</td>
+<td align="center">返回从 start 到 stop−1 的整数列表</td>
+</tr>
+<tr>
+<td align="center">range(start, stop, step)</td>
+<td align="center">返回从 start 到 stop 的整型列表，步长为 step</td>
+</tr>
+<tr>
+<td align="center">type(x)</td>
+<td align="center">返回 x 的 Python 数据类型</td>
+</tr>
+<tr>
+<td align="center">int(x)</td>
+<td align="center">返回 x 转换为整型的值。x 可以是数值或字符串</td>
+</tr>
+<tr>
+<td align="center">float(x)</td>
+<td align="center">返回 x 转换为浮点型的值。x 可以是数值或字符串</td>
+</tr>
+<tr>
+<td align="center">round(x)</td>
+<td align="center">返回 x 最近的整数值（作为浮点型）</td>
+</tr>
+</tbody></table>
+<h3 id="Math-库函数"><a href="#Math-库函数" class="headerlink" title="Math 库函数"></a>Math 库函数</h3><table>
+<thead>
+<tr>
+<th align="center">Python</th>
+<th align="center">数学</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">pi</td>
+<td align="center">$\pi$</td>
+<td align="center">$\pi$ 的近似值</td>
+</tr>
+<tr>
+<td align="center">e</td>
+<td align="center">$e$</td>
+<td align="center">$e$ 的近似值</td>
+</tr>
+<tr>
+<td align="center">sqrt(x)</td>
+<td align="center">$ \sqrt{x} $</td>
+<td align="center">$x$ 的平方根</td>
+</tr>
+<tr>
+<td align="center">sin(x)</td>
+<td align="center">$\sin x$</td>
+<td align="center">$x$ 的正弦</td>
+</tr>
+<tr>
+<td align="center">cos(x)</td>
+<td align="center">$\cos x$</td>
+<td align="center">$x$ 的余弦</td>
+</tr>
+<tr>
+<td align="center">tan(x)</td>
+<td align="center">$\tan x$</td>
+<td align="center">$x$ 的正切</td>
+</tr>
+<tr>
+<td align="center">asin(x)</td>
+<td align="center">$\arcsin x$</td>
+<td align="center">$x$ 的反正弦</td>
+</tr>
+<tr>
+<td align="center">acos(x)</td>
+<td align="center">$\arccos x$</td>
+<td align="center">$x$ 的反余弦</td>
+</tr>
+<tr>
+<td align="center">atan(x)</td>
+<td align="center">$\arctan x$</td>
+<td align="center">$x$ 的反正切</td>
+</tr>
+<tr>
+<td align="center">log(x)</td>
+<td align="center">$\ln x$</td>
+<td align="center">$x$ 的自然对数（e 为底）</td>
+</tr>
+<tr>
+<td align="center">log10(x)</td>
+<td align="center">$\log_{10}{x}$</td>
+<td align="center">$x$ 的常用对数（10 为底）</td>
+</tr>
+<tr>
+<td align="center">exp(x)</td>
+<td align="center">$e^x$</td>
+<td align="center">e 的 $x$ 次方</td>
+</tr>
+<tr>
+<td align="center">ceil(x)</td>
+<td align="center"></td>
+<td align="center">最小的 &gt;=$x$ 的整数</td>
+</tr>
+<tr>
+<td align="center">floor(x)</td>
+<td align="center"></td>
+<td align="center">最大的 &lt;=$x$ 的整数</td>
+</tr>
+</tbody></table>
+<h3 id="random-库"><a href="#random-库" class="headerlink" title="random 库"></a>random 库</h3><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">random()</td>
+<td align="center">返回在范围[0,1)中均匀分布的伪随机值</td>
+</tr>
+<tr>
+<td align="center">randrange(p1, p2)</td>
+<td align="center">返回在范围[p1, p2)的伪随机整数</td>
+</tr>
+</tbody></table>
+<h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><h3 id="序列操作（字符串和列表）"><a href="#序列操作（字符串和列表）" class="headerlink" title="序列操作（字符串和列表）"></a>序列操作（字符串和列表）</h3><table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><sequence>+<sequence></td>
+<td align="center">返回序列的连接。序列必须是相同类型</td>
+</tr>
+<tr>
+<td align="center"><sequence>*<n></td>
+<td align="center">返回序列与自身连接 n 次。n 必须是整数</td>
+</tr>
+<tr>
+<td align="center"><sequence>[<n>] where n &lt; 0</td>
+<td align="center">返回右边 n 第 n 个数据项（最右边算 1）。n 必须是整数</td>
+</tr>
+<tr>
+<td align="center">len(<sequence>)</td>
+<td align="center">返回序列的长度</td>
+</tr>
+<tr>
+<td align="center"><sequence>[<start>:<end>]</td>
+<td align="center">返回从 start 直到（但不包括）end 的子序列</td>
+</tr>
+<tr>
+<td align="center">for <var> in <sequence></td>
+<td align="center">迭代序列中的数据项</td>
+</tr>
+<tr>
+<td align="center"><expr> in <seq></td>
+<td align="center">成员检查</td>
+</tr>
+</tbody></table>
+<h2 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h2><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">s.capitalize()</td>
+<td align="center">只有第一个字符大写的 s 的副本</td>
+</tr>
+<tr>
+<td align="center">s.center(width)</td>
+<td align="center">在给定宽度的字段中居中的 s 的副本</td>
+</tr>
+<tr>
+<td align="center">s.count(sub)</td>
+<td align="center">计算 s 中的 sub 的出现次数</td>
+</tr>
+<tr>
+<td align="center">s.find(sub)</td>
+<td align="center">找到 sub 出现在 s 中的第一个位置</td>
+</tr>
+<tr>
+<td align="center">s.join(list)</td>
+<td align="center">将列表连接到字符串中，使用 s 作为分隔符</td>
+</tr>
+<tr>
+<td align="center">s.ljust(width)</td>
+<td align="center">类似 center，但 s 是左对齐</td>
+</tr>
+<tr>
+<td align="center">s.lower()</td>
+<td align="center">所有字符小写的 s 的副本</td>
+</tr>
+<tr>
+<td align="center">s.lstrip()</td>
+<td align="center">删除前导空格的副本</td>
+</tr>
+<tr>
+<td align="center">s.replace(oldsub,newsub)</td>
+<td align="center">使用 newsub 替换 s 中的所有出现的 oldsub</td>
+</tr>
+<tr>
+<td align="center">s.rfind(sub)</td>
+<td align="center">类似 find，但近观回最右边的位置</td>
+</tr>
+<tr>
+<td align="center">s.rjust(width)</td>
+<td align="center">类似 center，但 s 是右对齐</td>
+</tr>
+<tr>
+<td align="center">s.rstrip()</td>
+<td align="center">删除尾部空格的 s 的副本</td>
+</tr>
+<tr>
+<td align="center">s.split()</td>
+<td align="center">将 s 分割成子字符串列表</td>
+</tr>
+<tr>
+<td align="center">s.title()</td>
+<td align="center">s 的每个单词的第一个字符大写的副本</td>
+</tr>
+<tr>
+<td align="center">s.upper()</td>
+<td align="center">所有字符都转换为大写的 s 的副本</td>
+</tr>
+</tbody></table>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">float(<expr>)</td>
+<td align="center">将 expr 转换为浮点值</td>
+</tr>
+<tr>
+<td align="center">int(<expr>)</td>
+<td align="center">将 expr 转换为整数值</td>
+</tr>
+<tr>
+<td align="center">str(<expr>)</td>
+<td align="center">返回 expr 的字符串表示形式</td>
+</tr>
+<tr>
+<td align="center">eval(<string>)</td>
+<td align="center">将字符串作为表达式求值</td>
+</tr>
+</tbody></table>
+<h3 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h3><p><strong>表达式语法</strong></p>
+<p><template-string>.format(<value0>, <value1>, <value2>, …)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“Hello, &#123;<span class="number">0</span>&#125;”.<span class="built_in">format</span>(<span class="string">&quot;Tom&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>格式说明</strong></p>
+<p>{<index>}</p>
+<p>{<index>:<width>} ：value 数据长度不够 width，后面补空格</p>
+<p>{<index>:<width>.<precision>}：只获取 value 数据的 precision 长度</p>
+<p>{<index>:<width>.<places>f }：保留 value 数据小数点前 places 位</p>
+<ul>
+<li>最后的形式是针对固定的小数位数。</li>
+<li>宽度为 0 表示不论需要多少空间。</li>
+<li>前导 0 的宽度表示必要时的填充为 0（默认为空格）。</li>
+<li>宽度前面可以有&lt;表示左对齐，&gt;用表示右对齐，或^表示中心对齐。</li>
+</ul>
+<h2 id="列表方法"><a href="#列表方法" class="headerlink" title="列表方法"></a>列表方法</h2><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><list>.append(x)</td>
+<td align="center">将元素 x 添加到列表末尾</td>
+</tr>
+<tr>
+<td align="center"><list>.sort()</td>
+<td align="center">对列表排序。关键字参数 key、reverse</td>
+</tr>
+<tr>
+<td align="center"><list>.reverse()</td>
+<td align="center">反转列表</td>
+</tr>
+<tr>
+<td align="center"><list>.index(x)</td>
+<td align="center">返回 x 首次出现的索引</td>
+</tr>
+<tr>
+<td align="center"><list>.insert(i, x)</td>
+<td align="center">在列表的索引 i 处插入 x</td>
+</tr>
+<tr>
+<td align="center"><list>.count(x)</td>
+<td align="center">返回 x 在列表中出现的次数</td>
+</tr>
+<tr>
+<td align="center"><list>.remove(x)</td>
+<td align="center">删除列表中首次出现的 x</td>
+</tr>
+<tr>
+<td align="center"><list>.pop(i)</td>
+<td align="center">删除列表中第 i 个元素并返回它的值</td>
+</tr>
+</tbody></table>
+<h2 id="字典方法"><a href="#字典方法" class="headerlink" title="字典方法"></a>字典方法</h2><p>字典字面量：{<key1>: <value1>, <key2>: <value2>, …} </p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><key> in <dict></td>
+<td align="center">如果字典包含指定的 key，就返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="center"><dict>.keys()</td>
+<td align="center">返回键的序列</td>
+</tr>
+<tr>
+<td align="center"><dict>.values()</td>
+<td align="center">返回值的序列</td>
+</tr>
+<tr>
+<td align="center"><dict>.items()</td>
+<td align="center">返回元组（key,value）的序列，表示键值对</td>
+</tr>
+<tr>
+<td align="center"><dict>.get(<key>,<default>)</td>
+<td align="center">如果字典包含键 key 就返回它的值，否则返回默认值 defaul</td>
+</tr>
+<tr>
+<td align="center">del <dict>[<key>]</td>
+<td align="center">删除指定的条目</td>
+</tr>
+<tr>
+<td align="center"><dict>.clear()</td>
+<td align="center">删除所有条目</td>
+</tr>
+<tr>
+<td align="center">for <var> in <dict>:</td>
+<td align="center">循环遍历所有键</td>
+</tr>
+</tbody></table>
+<h2 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2><p><strong>字面量</strong>：True，False</p>
+<p><strong>操作符</strong>：and，or，not</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">操作定义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x and y</td>
+<td align="center">如果 x 为 false，返回 x，否则返回 y</td>
+</tr>
+<tr>
+<td align="center">x or y</td>
+<td align="center">如果 x 为 true，返回 x，否则返回 y</td>
+</tr>
+<tr>
+<td align="center">not x</td>
+<td align="center">如果 x 为 false，返回 True，否则返回 False</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/12/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AB%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -893,87 +1381,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/07/HexoTool%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Junyo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Junyo | 博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/07/HexoTool%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">HexoTool批处理脚本</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-05-07 12:20:16 / 修改时间：20:06:26" itemprop="dateCreated datePublished" datetime="2021-05-07T12:20:16+08:00">2021-05-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%84%9A%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">脚本</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%84%9A%E6%9C%AC/Bat/" itemprop="url" rel="index"><span itemprop="name">Bat</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>批处理定义：批处理文件是将一系列命令按一定的顺序集合为一个可执行的文本文件，<strong>其扩展名为BAT 或者 CMD</strong> 。这些命令统称批处理命令。</p>
-<p>其实，我们在 <strong>CMD</strong> 中输入的例如 <code>cd</code>、<code>ping</code> 命令都是批处理命令。</p>
-<p>在 windows 平台下编写一个批处理文件，有利与我们处理一些繁琐且重复的活动，例如本文介绍的利用批处理命令编写一个用于管理 Hexo 博客的批处理脚本。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/07/HexoTool%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1043,7 +1450,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
