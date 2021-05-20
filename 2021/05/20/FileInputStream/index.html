@@ -20,24 +20,20 @@
     var CONFIG = {"hostname":"cn-jd.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本 Java I&#x2F;O 系列参考来源于该 地址  Java I&#x2F;O (Input 和 Output) 用于处理输入和产生输出 Java 使用流的概念来使 I&#x2F;O 操作更快，java.io 包包含了输入和输出操作所需的所有类 我们可以通过 Java I&#x2F;O API 在 Java 中进行文件处理">
+  <meta name="description" content="文件输入流文件输入流（FileInputStream）从文件中获取输入字节 它用于读取面向字节的数据(原始字节流)，如图像数据、音频、视频等 您还可以读取字符流数据。但是，对于读取字符流，建议使用 FileReader 类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Input&#x2F;Output">
-<meta property="og:url" content="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/index.html">
+<meta property="og:title" content="FileInputStream">
+<meta property="og:url" content="https://cn-jd.github.io/2021/05/20/FileInputStream/index.html">
 <meta property="og:site_name" content="Junyo | 博客">
-<meta property="og:description" content="本 Java I&#x2F;O 系列参考来源于该 地址  Java I&#x2F;O (Input 和 Output) 用于处理输入和产生输出 Java 使用流的概念来使 I&#x2F;O 操作更快，java.io 包包含了输入和输出操作所需的所有类 我们可以通过 Java I&#x2F;O API 在 Java 中进行文件处理">
+<meta property="og:description" content="文件输入流文件输入流（FileInputStream）从文件中获取输入字节 它用于读取面向字节的数据(原始字节流)，如图像数据、音频、视频等 您还可以读取字符流数据。但是，对于读取字符流，建议使用 FileReader 类">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-io-flow.png">
-<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-outputstream.png">
-<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-inputstream.png">
-<meta property="article:published_time" content="2021-05-20T14:46:04.000Z">
-<meta property="article:modified_time" content="2021-05-20T14:49:05.173Z">
+<meta property="article:published_time" content="2021-05-20T15:14:02.000Z">
+<meta property="article:modified_time" content="2021-05-20T15:40:59.181Z">
 <meta property="article:author" content="Junyo">
 <meta property="article:tag" content="Java I&#x2F;O">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://static.javatpoint.com/java/javaio/images/java-io-flow.png">
 
-<link rel="canonical" href="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/">
+<link rel="canonical" href="https://cn-jd.github.io/2021/05/20/FileInputStream/">
 
 
 <script id="page-configurations">
@@ -50,7 +46,7 @@
   };
 </script>
 
-  <title>Java Input/Output | Junyo | 博客</title>
+  <title>FileInputStream | Junyo | 博客</title>
   
 
 
@@ -160,7 +156,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/20/FileInputStream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -173,7 +169,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java Input/Output
+          FileInputStream
         </h1>
 
         <div class="post-meta">
@@ -184,7 +180,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-20 22:46:04 / 修改时间：22:49:05" itemprop="dateCreated datePublished" datetime="2021-05-20T22:46:04+08:00">2021-05-20</time>
+              <time title="创建时间：2021-05-20 23:14:02 / 修改时间：23:40:59" itemprop="dateCreated datePublished" datetime="2021-05-20T23:14:02+08:00">2021-05-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,82 +207,75 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>本 Java I/O 系列参考来源于该 <a target="_blank" rel="noopener" href="https://www.javatpoint.com/java-io">地址</a></p>
-</blockquote>
-<p><strong>Java I/O</strong> (Input 和 Output) 用于处理输入和产生输出</p>
-<p>Java 使用流的概念来使 I/O 操作更快，<code>java.io</code> 包包含了输入和输出操作所需的所有类</p>
-<p>我们可以通过 Java I/O API 在 Java 中进行文件处理</p>
+        <h2 id="文件输入流"><a href="#文件输入流" class="headerlink" title="文件输入流"></a>文件输入流</h2><p>文件输入流（FileInputStream）从文件中获取输入字节</p>
+<p>它用于读取面向字节的数据(原始字节流)，如图像数据、音频、视频等</p>
+<p>您还可以读取字符流数据。但是，对于读取字符流，建议使用 <code>FileReader</code> 类</p>
 <span id="more"></span>
 
-
-
-<h2 id="流（Stream）"><a href="#流（Stream）" class="headerlink" title="流（Stream）"></a>流（Stream）</h2><p>流（Stream）是一个数据序列，在 Java 中，流是由字节组成的。它之所以被称为流，是因为它就像一条不断流动的水流</p>
-<p>在 Java 中，为我们自动创建了3个流，所有这些流都与控制台相连</p>
-<ol>
-<li><strong>System.out</strong>：标准输出流</li>
-<li><strong>System.in</strong>: 标准输入流</li>
-<li><strong>System.out</strong>: 标准错误流</li>
-</ol>
-<p>向控制台打印输出和错误消息的代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;simple message&quot;</span>);</span><br><span class="line">System.err.println(<span class="string">&quot;error message&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>从控制台获取输入的代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = System.in.read(); <span class="comment">// 返回第一个字符的 ASCII 码</span></span><br><span class="line">System.out.println((<span class="keyword">char</span>) i); <span class="comment">// 打印字符</span></span><br></pre></td></tr></table></figure>
+<h2 id="类声明"><a href="#类声明" class="headerlink" title="类声明"></a>类声明</h2><p><code>java.io.FileInputStream</code> class:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileInputStream</span> <span class="keyword">extends</span> <span class="title">InputStream</span>  </span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="输入输出流"><a href="#输入输出流" class="headerlink" title="输入输出流"></a>输入输出流</h2><p><strong>输出流（OutputStream）</strong>：Java 应用程序使用输出流将数据写入一个目的地，它可以是一个文件、一个数组、外围设备或套接字</p>
-<p><strong>输入流（InputStream）</strong>：Java应用程序使用输入流从源中读取数据，它可以是文件，阵列，外围设备或套接字</p>
-<p><img src="https://static.javatpoint.com/java/javaio/images/java-io-flow.png" alt="Java IO"></p>
-<h2 id="输出流类"><a href="#输出流类" class="headerlink" title="输出流类"></a>输出流类</h2><p><strong>OutputStream</strong> 类是一个抽象的类，它是所有代表字节输出流类的超类，输出流接受输出字节并将其发送到某个接收器</p>
-<h3 id="输出流的实用方法"><a href="#输出流的实用方法" class="headerlink" title="输出流的实用方法"></a>输出流的实用方法</h3><table>
+<h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><table>
 <thead>
 <tr>
-<th>方法</th>
-<th>描述</th>
+<th align="left">方法</th>
+<th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>public abstract void write(int b) throws IOException</td>
-<td>将字节写入当前输出流</td>
+<td align="left">int available()</td>
+<td align="left">它用于返回可以从输入流读取的估计字节数</td>
 </tr>
 <tr>
-<td>public void write(byte b[]) throws IOException</td>
-<td>将字节数组写入当前输出流</td>
+<td align="left">int read()</td>
+<td align="left">它用于从输入流中读取一个数据字节</td>
 </tr>
 <tr>
-<td>public void flush() throws IOException</td>
-<td>刷新当前输出流</td>
+<td align="left">int read(byte[] b)</td>
+<td align="left">它用于从输入流中读取最多 <strong>b.length</strong> 个数据字节</td>
 </tr>
 <tr>
-<td>public void close() throws IOException</td>
-<td>关闭当前输出流</td>
+<td align="left">int read(byte[] b, int off, int len)</td>
+<td align="left">它用于从输入流中读取从偏移量 <strong>off</strong> 开始最多 <strong>len</strong> 字节的数据</td>
+</tr>
+<tr>
+<td align="left">long skip(long x)</td>
+<td align="left">它用于跳过并丢弃输入流中的 <strong>x</strong> 字节数据</td>
+</tr>
+<tr>
+<td align="left">FileChannel getChannel()</td>
+<td align="left">它用于返回与文件输入流关联的唯一文件通道对象</td>
+</tr>
+<tr>
+<td align="left">FileDescriptor getFD()</td>
+<td align="left">它用于返回文件描述符对象</td>
+</tr>
+<tr>
+<td align="left">protected void finalize()</td>
+<td align="left">它用于确保在没有更多对文件输入流的引用时调用close方法</td>
+</tr>
+<tr>
+<td align="left">void close()</td>
+<td align="left">用于关闭流</td>
 </tr>
 </tbody></table>
-<h3 id="输出流的层次结构"><a href="#输出流的层次结构" class="headerlink" title="输出流的层次结构"></a>输出流的层次结构</h3><p><img src="https://static.javatpoint.com/java/javaio/images/java-outputstream.png" alt="Java output stream hierarchy"></p>
-<h2 id="输入流类"><a href="#输入流类" class="headerlink" title="输入流类"></a>输入流类</h2><p><strong>InputStream</strong> 类是一个抽象类，它是所有代表字节输入流类的超类</p>
-<h3 id="输入流的实用方法"><a href="#输入流的实用方法" class="headerlink" title="输入流的实用方法"></a>输入流的实用方法</h3><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>public abstract int read() throws IOException</td>
-<td>从输入流中读取下一个字节的数据，在文件结束时返回 -1</td>
-</tr>
-<tr>
-<td>public int available() throws IOException</td>
-<td>返回可以从当前输入流中读取的字节数的估计值</td>
-</tr>
-<tr>
-<td>public void close() throws IOException</td>
-<td>关闭当前输入流</td>
-</tr>
-</tbody></table>
-<h3 id="输入流的层次结构"><a href="#输入流的层次结构" class="headerlink" title="输入流的层次结构"></a>输入流的层次结构</h3><p><img src="https://static.javatpoint.com/java/javaio/images/java-inputstream.png" alt="Java input stream hierarchy"></p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="示例-1：读取单个字节"><a href="#示例-1：读取单个字节" class="headerlink" title="示例 1：读取单个字节"></a>示例 1：读取单个字节</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataStreamExample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      FileInputStream fin = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;D:\\testout.txt&quot;</span>);</span><br><span class="line">      <span class="keyword">int</span> i = fin.read();</span><br><span class="line">      System.out.print((<span class="keyword">char</span>) i);</span><br><span class="line">        </span><br><span class="line">      fin.close();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">      System.out.println(e);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>testout.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javatpoint.</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">W</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="示例2：读取全部字节"><a href="#示例2：读取全部字节" class="headerlink" title="示例2：读取全部字节"></a>示例2：读取全部字节</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataStreamExample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      FileInputStream fin = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;D:\\testout.txt&quot;</span>);</span><br><span class="line">      <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">while</span> ((i = fin.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">        System.out.print((<span class="keyword">char</span>) i);</span><br><span class="line">      &#125;</span><br><span class="line">      fin.close();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">      System.out.println(e);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javaTpoint.</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -305,13 +294,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/20/MyBatis-Plus/" rel="prev" title="MyBatis-Plus">
-      <i class="fa fa-chevron-left"></i> MyBatis-Plus
+    <a href="/2021/05/20/FileOutputStream/" rel="prev" title="FileOutputStream">
+      <i class="fa fa-chevron-left"></i> FileOutputStream
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/05/20/FileOutputStream/" rel="next" title="FileOutputStream">
-      FileOutputStream <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -370,7 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%EF%BC%88Stream%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">流（Stream）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text">输入输出流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">输出流类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%9A%84%E5%AE%9E%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">输出流的实用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">输出流的层次结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">输入流类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%9A%84%E5%AE%9E%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">输入流的实用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">4.2.</span> <span class="nav-text">输入流的层次结构</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">文件输入流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%A3%B0%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">类声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1%EF%BC%9A%E8%AF%BB%E5%8F%96%E5%8D%95%E4%B8%AA%E5%AD%97%E8%8A%82"><span class="nav-number">4.1.</span> <span class="nav-text">示例 1：读取单个字节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B2%EF%BC%9A%E8%AF%BB%E5%8F%96%E5%85%A8%E9%83%A8%E5%AD%97%E8%8A%82"><span class="nav-number">4.2.</span> <span class="nav-text">示例2：读取全部字节</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
