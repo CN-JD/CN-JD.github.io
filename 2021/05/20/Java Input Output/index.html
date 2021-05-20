@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"cn-jd.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="变量和简单数据类型变量Python 中变量无需声明类型，会根据赋值的内容自动推导类型 变量命名注意事项：  变量名只能包含字母、数字、下划线。下划线不能作为开头 不能包含空格 不使用 Python 关键字和函数名为变量名 变量名应 “短小且精悍”（描述性好）">
+  <meta name="description" content="本 Java I&#x2F;O 系列参考来源于该 地址  Java I&#x2F;O (Input 和 Output) 用于处理输入和产生输出 Java 使用流的概念来使 I&#x2F;O 操作更快，java.io 包包含了输入和输出操作所需的所有类 我们可以通过 Java I&#x2F;O API 在 Java 中进行文件处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 学习笔记（一）">
-<meta property="og:url" content="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="Java Input&#x2F;Output">
+<meta property="og:url" content="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/index.html">
 <meta property="og:site_name" content="Junyo | 博客">
-<meta property="og:description" content="变量和简单数据类型变量Python 中变量无需声明类型，会根据赋值的内容自动推导类型 变量命名注意事项：  变量名只能包含字母、数字、下划线。下划线不能作为开头 不能包含空格 不使用 Python 关键字和函数名为变量名 变量名应 “短小且精悍”（描述性好）">
+<meta property="og:description" content="本 Java I&#x2F;O 系列参考来源于该 地址  Java I&#x2F;O (Input 和 Output) 用于处理输入和产生输出 Java 使用流的概念来使 I&#x2F;O 操作更快，java.io 包包含了输入和输出操作所需的所有类 我们可以通过 Java I&#x2F;O API 在 Java 中进行文件处理">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-09T01:51:16.000Z">
-<meta property="article:modified_time" content="2021-05-09T13:26:26.438Z">
+<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-io-flow.png">
+<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-outputstream.png">
+<meta property="og:image" content="https://static.javatpoint.com/java/javaio/images/java-inputstream.png">
+<meta property="article:published_time" content="2021-05-20T14:46:04.000Z">
+<meta property="article:modified_time" content="2021-05-20T14:49:05.173Z">
 <meta property="article:author" content="Junyo">
-<meta property="article:tag" content="Python 学习笔记">
+<meta property="article:tag" content="Java I&#x2F;O">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://static.javatpoint.com/java/javaio/images/java-io-flow.png">
 
-<link rel="canonical" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
+<link rel="canonical" href="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>Python 学习笔记（一） | Junyo | 博客</title>
+  <title>Java Input/Output | Junyo | 博客</title>
   
 
 
@@ -156,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/20/Java%20Input%20Output/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +173,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python 学习笔记（一）
+          Java Input/Output
         </h1>
 
         <div class="post-meta">
@@ -180,7 +184,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-09 09:51:16 / 修改时间：21:26:26" itemprop="dateCreated datePublished" datetime="2021-05-09T09:51:16+08:00">2021-05-09</time>
+              <time title="创建时间：2021-05-20 22:46:04 / 修改时间：22:49:05" itemprop="dateCreated datePublished" datetime="2021-05-20T22:46:04+08:00">2021-05-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -192,7 +196,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
                 </span>
             </span>
 
@@ -207,104 +211,82 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>Python 中变量无需声明类型，会根据赋值的内容自动推导类型</p>
-<p>变量命名注意事项：</p>
-<ul>
-<li>变量名只能包含字母、数字、下划线。下划线不能作为开头</li>
-<li>不能包含空格</li>
-<li>不使用 Python 关键字和函数名为变量名</li>
-<li>变量名应 “短小且精悍”（描述性好）</li>
-</ul>
+        <blockquote>
+<p>本 Java I/O 系列参考来源于该 <a target="_blank" rel="noopener" href="https://www.javatpoint.com/java-io">地址</a></p>
+</blockquote>
+<p><strong>Java I/O</strong> (Input 和 Output) 用于处理输入和产生输出</p>
+<p>Java 使用流的概念来使 I/O 操作更快，<code>java.io</code> 包包含了输入和输出操作所需的所有类</p>
+<p>我们可以通过 Java I/O API 在 Java 中进行文件处理</p>
 <span id="more"></span>
 
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>使用引号（单引号、双引号）括起的一系列字符</p>
-<p>大小写相关函数：</p>
-<table>
+
+
+<h2 id="流（Stream）"><a href="#流（Stream）" class="headerlink" title="流（Stream）"></a>流（Stream）</h2><p>流（Stream）是一个数据序列，在 Java 中，流是由字节组成的。它之所以被称为流，是因为它就像一条不断流动的水流</p>
+<p>在 Java 中，为我们自动创建了3个流，所有这些流都与控制台相连</p>
+<ol>
+<li><strong>System.out</strong>：标准输出流</li>
+<li><strong>System.in</strong>: 标准输入流</li>
+<li><strong>System.out</strong>: 标准错误流</li>
+</ol>
+<p>向控制台打印输出和错误消息的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;simple message&quot;</span>);</span><br><span class="line">System.err.println(<span class="string">&quot;error message&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>从控制台获取输入的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = System.in.read(); <span class="comment">// 返回第一个字符的 ASCII 码</span></span><br><span class="line">System.out.println((<span class="keyword">char</span>) i); <span class="comment">// 打印字符</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="输入输出流"><a href="#输入输出流" class="headerlink" title="输入输出流"></a>输入输出流</h2><p><strong>输出流（OutputStream）</strong>：Java 应用程序使用输出流将数据写入一个目的地，它可以是一个文件、一个数组、外围设备或套接字</p>
+<p><strong>输入流（InputStream）</strong>：Java应用程序使用输入流从源中读取数据，它可以是文件，阵列，外围设备或套接字</p>
+<p><img src="https://static.javatpoint.com/java/javaio/images/java-io-flow.png" alt="Java IO"></p>
+<h2 id="输出流类"><a href="#输出流类" class="headerlink" title="输出流类"></a>输出流类</h2><p><strong>OutputStream</strong> 类是一个抽象的类，它是所有代表字节输出流类的超类，输出流接受输出字节并将其发送到某个接收器</p>
+<h3 id="输出流的实用方法"><a href="#输出流的实用方法" class="headerlink" title="输出流的实用方法"></a>输出流的实用方法</h3><table>
 <thead>
 <tr>
-<th align="center">函数名</th>
-<th align="center">作用</th>
+<th>方法</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">title</td>
-<td align="center">每个单词首字母大写</td>
+<td>public abstract void write(int b) throws IOException</td>
+<td>将字节写入当前输出流</td>
 </tr>
 <tr>
-<td align="center">upper</td>
-<td align="center">全部大写</td>
+<td>public void write(byte b[]) throws IOException</td>
+<td>将字节数组写入当前输出流</td>
 </tr>
 <tr>
-<td align="center">lower</td>
-<td align="center">全部小写</td>
+<td>public void flush() throws IOException</td>
+<td>刷新当前输出流</td>
+</tr>
+<tr>
+<td>public void close() throws IOException</td>
+<td>关闭当前输出流</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = <span class="string">&quot;hello world&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>name.title()</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
-
-
-
-<p>删除空格：</p>
-<table>
+<h3 id="输出流的层次结构"><a href="#输出流的层次结构" class="headerlink" title="输出流的层次结构"></a>输出流的层次结构</h3><p><img src="https://static.javatpoint.com/java/javaio/images/java-outputstream.png" alt="Java output stream hierarchy"></p>
+<h2 id="输入流类"><a href="#输入流类" class="headerlink" title="输入流类"></a>输入流类</h2><p><strong>InputStream</strong> 类是一个抽象类，它是所有代表字节输入流类的超类</p>
+<h3 id="输入流的实用方法"><a href="#输入流的实用方法" class="headerlink" title="输入流的实用方法"></a>输入流的实用方法</h3><table>
 <thead>
 <tr>
-<th align="center">函数名</th>
-<th align="center">作用</th>
+<th>方法</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">rstrip</td>
-<td align="center">删除末尾空格</td>
+<td>public abstract int read() throws IOException</td>
+<td>从输入流中读取下一个字节的数据，在文件结束时返回 -1</td>
 </tr>
 <tr>
-<td align="center">lstrip</td>
-<td align="center">删除开头空格</td>
+<td>public int available() throws IOException</td>
+<td>返回可以从当前输入流中读取的字节数的估计值</td>
 </tr>
 <tr>
-<td align="center">strip</td>
-<td align="center">删除两端空格</td>
+<td>public void close() throws IOException</td>
+<td>关闭当前输入流</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 永久去除空格</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = <span class="string">&quot; Tom &quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>name = name.strip()</span><br></pre></td></tr></table></figure>
-
-
-
-<p>使用字符串注意事项：</p>
-<ul>
-<li>撇号 <code>&#39;</code> 要位于双引号 <code>&quot; &quot;</code> 之间，在单引号 <code>&#39; &#39;</code> 之间会报错</li>
-<li><code>\n</code> 表示换行，<code>\t</code> 表示制表符</li>
-<li>双引号之间可以使用单引号，在单引号之间可以用双引号</li>
-</ul>
-<blockquote>
-<p>在 Python 2 中 print 语句可以无需括号包装内容，但在 Python 3 中必须需要括号 </p>
-</blockquote>
-<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>Python 中将数字分为 <code>整数 int</code> 和 <code>浮点数 float</code></p>
-<p>Python 将带小数点的数字都称为浮点数</p>
-<p>基本运算符：加（+）减（-）乘（*）除（/）</p>
-<p>几次方运算：**</p>
-<p>求模运算符：%</p>
-<p>扩展运算：//（除取整）、+= 、-=、*=、/=、//=</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> % <span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> / <span class="number">2</span></span><br><span class="line"><span class="number">1.5</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> // <span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>数字运算注意事项：</p>
-<ul>
-<li>Python 不支持自增减符 ++、- -</li>
-<li>//（除取整）不是四舍五入，而是将小数部分直接删除</li>
-<li>在字符串中使用值为数字的变量时，需使用 <code>str()</code> 函数进行类型转换</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>age = <span class="number">18</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">&quot;I am &quot;</span> + <span class="built_in">str</span>(age))</span><br><span class="line">I am <span class="number">18</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Python 2 整数除法与 Python 3 的 // 结果相同，浮点数除法时才会保留小数</p>
-</blockquote>
-<h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><p>在 Python 中使用 <code>True</code> 和 <code>False</code> 表示是否，与其他编程语言不同，它们的开头是大写字母</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>在 Python中，注释用井号（#）标识</p>
-<p>注释使用注意事项：</p>
-<ul>
-<li>编写注释的主要目的是阐述代码要做什么，以及是如何做的</li>
-<li>在代码中编写清晰、简洁的注释</li>
-</ul>
+<h3 id="输入流的层次结构"><a href="#输入流的层次结构" class="headerlink" title="输入流的层次结构"></a>输入流的层次结构</h3><p><img src="https://static.javatpoint.com/java/javaio/images/java-inputstream.png" alt="Java input stream hierarchy"></p>
 
     </div>
 
@@ -314,7 +296,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># Python 学习笔记</a>
+              <a href="/tags/Java-I-O/" rel="tag"># Java I/O</a>
           </div>
 
         
@@ -323,13 +305,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/07/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="prev" title="Git常用命令">
-      <i class="fa fa-chevron-left"></i> Git常用命令
+    <a href="/2021/05/20/MyBatis-Plus/" rel="prev" title="MyBatis-Plus">
+      <i class="fa fa-chevron-left"></i> MyBatis-Plus
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="next" title="Python 学习笔记（二）">
-      Python 学习笔记（二） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -388,7 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">变量和简单数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.2.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97"><span class="nav-number">1.3.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC"><span class="nav-number">1.4.</span> <span class="nav-text">布尔值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.5.</span> <span class="nav-text">注释</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%EF%BC%88Stream%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">流（Stream）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81"><span class="nav-number">2.</span> <span class="nav-text">输入输出流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">输出流类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%9A%84%E5%AE%9E%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">输出流的实用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%B5%81%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">输出流的层次结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">输入流类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%9A%84%E5%AE%9E%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">输入流的实用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%B5%81%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">4.2.</span> <span class="nav-text">输入流的层次结构</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
