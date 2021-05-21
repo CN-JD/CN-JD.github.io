@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"cn-jd.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="if 语句条件测试每条if语句的核心都是一个值为 True 或 False 的表达式，这种表达式被称为条件测试">
+  <meta name="description" content="缓冲输入流缓冲输入流（BufferedInputStream）用于从流中读取信息 它在内部使用缓冲机制来提高性能 关于 BufferedInputStream 的要点是：  当流中的字节被跳过或读出时，内部缓冲区会自动从包含的输入流中重新填充多个字节 当创建 BufferedInputStream 时，将创建一个内部缓冲区数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 学习笔记（三）">
-<meta property="og:url" content="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/index.html">
+<meta property="og:title" content="BufferedInputStream">
+<meta property="og:url" content="https://cn-jd.github.io/2021/05/21/BufferedInputStream/index.html">
 <meta property="og:site_name" content="Junyo | 博客">
-<meta property="og:description" content="if 语句条件测试每条if语句的核心都是一个值为 True 或 False 的表达式，这种表达式被称为条件测试">
+<meta property="og:description" content="缓冲输入流缓冲输入流（BufferedInputStream）用于从流中读取信息 它在内部使用缓冲机制来提高性能 关于 BufferedInputStream 的要点是：  当流中的字节被跳过或读出时，内部缓冲区会自动从包含的输入流中重新填充多个字节 当创建 BufferedInputStream 时，将创建一个内部缓冲区数组">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-09T07:10:58.000Z">
-<meta property="article:modified_time" content="2021-05-09T12:08:32.297Z">
+<meta property="article:published_time" content="2021-05-21T03:13:14.000Z">
+<meta property="article:modified_time" content="2021-05-21T03:35:09.462Z">
 <meta property="article:author" content="Junyo">
-<meta property="article:tag" content="Python 学习笔记">
+<meta property="article:tag" content="Java I&#x2F;O">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/">
+<link rel="canonical" href="https://cn-jd.github.io/2021/05/21/BufferedInputStream/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Python 学习笔记（三） | Junyo | 博客</title>
+  <title>BufferedInputStream | Junyo | 博客</title>
   
 
 
@@ -156,7 +156,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://cn-jd.github.io/2021/05/21/BufferedInputStream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +169,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python 学习笔记（三）
+          BufferedInputStream
         </h1>
 
         <div class="post-meta">
@@ -180,7 +180,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-09 15:10:58 / 修改时间：20:08:32" itemprop="dateCreated datePublished" datetime="2021-05-09T15:10:58+08:00">2021-05-09</time>
+              <time title="创建时间：2021-05-21 11:13:14 / 修改时间：11:35:09" itemprop="dateCreated datePublished" datetime="2021-05-21T11:13:14+08:00">2021-05-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -192,7 +192,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
                 </span>
             </span>
 
@@ -207,65 +207,84 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h2><h3 id="条件测试"><a href="#条件测试" class="headerlink" title="条件测试"></a>条件测试</h3><p>每条if语句的核心都是一个值为 <code>True</code> 或 <code>False</code> 的表达式，这种表达式被称为条件测试</p>
+        <h2 id="缓冲输入流"><a href="#缓冲输入流" class="headerlink" title="缓冲输入流"></a>缓冲输入流</h2><p>缓冲输入流（BufferedInputStream）用于从流中读取信息</p>
+<p>它在内部使用缓冲机制来提高性能</p>
+<p>关于 <code>BufferedInputStream</code> 的要点是：</p>
+<ul>
+<li>当流中的字节被跳过或读出时，内部缓冲区会自动从包含的输入流中重新填充多个字节</li>
+<li>当创建 <code>BufferedInputStream</code> 时，将创建一个内部缓冲区数组</li>
+</ul>
 <span id="more"></span>
 
-<table>
+<h2 id="类声明"><a href="#类声明" class="headerlink" title="类声明"></a>类声明</h2><p><code>Java.io.BufferedInputStream</code> class:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedInputStream</span> <span class="keyword">extends</span> <span class="title">FilterInputStream</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="类构造函数"><a href="#类构造函数" class="headerlink" title="类构造函数"></a>类构造函数</h2><table>
 <thead>
 <tr>
-<th align="center">符号</th>
-<th align="center">作用</th>
+<th align="left">构造函数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">==</td>
-<td align="center">检查是否相等</td>
+<td align="left">BufferedInputStream(InputStream IS)</td>
+<td align="left">它创建 <code>BufferedInputStream</code> 并将其参数（输入流 <strong>IS</strong>）保存起来，以备后用</td>
 </tr>
 <tr>
-<td align="center">!=</td>
-<td align="center">检查是否不相等</td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td align="center">是否大于</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td align="center">是否小于</td>
-</tr>
-<tr>
-<td align="center">&gt;=</td>
-<td align="center">是否大于等于</td>
-</tr>
-<tr>
-<td align="center">&lt;=</td>
-<td align="center">是否小于等于</td>
-</tr>
-<tr>
-<td align="center">and</td>
-<td align="center">同时满足所有条件</td>
-</tr>
-<tr>
-<td align="center">or</td>
-<td align="center">至少满足一个条件</td>
-</tr>
-<tr>
-<td align="center">not</td>
-<td align="center">条件取反</td>
+<td align="left">BufferedInputStream(InputStream IS, int size)</td>
+<td align="left">它创建具有指定缓冲区大小的 <code>BufferedInputStream</code>，并将其参数（输入流 <strong>IS</strong>）保存起来，以备后用</td>
 </tr>
 </tbody></table>
-<blockquote>
-<p>Python 里的 <code>and</code> 相当于 Java 的 <code>&amp;&amp;</code>，<code>or</code> 相当于 Java 的 <code>||</code> ，<code>not</code> 相当于 Java 的 <code>!</code></p>
-</blockquote>
-<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><ul>
-<li><p>简单的 <code>if</code> 语句</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> conditional_test:</span><br><span class="line">	do something</span><br></pre></td></tr></table></figure></li>
-<li><p><code>if-else</code> 语句</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> conditional_test:</span><br><span class="line">	do something</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	do other</span><br></pre></td></tr></table></figure></li>
-<li><p><code>if-elif-else</code> 语句</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> conditional_test:</span><br><span class="line">	do something</span><br><span class="line"><span class="keyword">elif</span> conditional_test_2:</span><br><span class="line">	do something_2</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	do other</span><br></pre></td></tr></table></figure></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="number">88</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;获得优秀奖&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;良好&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;获得一巴掌&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;颁奖完成&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">int available()</td>
+<td align="left">它返回可以从输入流读取的估计字节数，而不会被输入流的下一个调用方法阻塞</td>
+</tr>
+<tr>
+<td align="left">int read()</td>
+<td align="left">它从输入流中读取下一个字节</td>
+</tr>
+<tr>
+<td align="left">int read(byte[] b, int off, int ln)</td>
+<td align="left">它从给定的偏移量开始，将指定长度的输入流中的字节读入到字节数组</td>
+</tr>
+<tr>
+<td align="left">void close()</td>
+<td align="left">它关闭输入流并释放与该流关联的任何系统资源</td>
+</tr>
+<tr>
+<td align="left">void reset()</td>
+<td align="left">它将流重新定位在此输入流上最后一次调用 <code>mark</code> 方法的位置</td>
+</tr>
+<tr>
+<td align="left">void mark(int readlimit)</td>
+<td align="left">它查看输入流的 <code>mark</code> 方法的常规协定</td>
+</tr>
+<tr>
+<td align="left">long skip(long x)</td>
+<td align="left">跳过并丢弃输入流中的 <strong>x</strong> 字节数据</td>
+</tr>
+<tr>
+<td align="left">boolean markSupported()</td>
+<td align="left">它测试输入流是否支持 <code>mark</code> 和 <code>reset</code> 方法。</td>
+</tr>
+</tbody></table>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>使用 <code>BufferedInputStream</code> 读取文件数据：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedInputStreamExample</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            FileInputStream fin = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;testout.txt&quot;</span>);</span><br><span class="line">            BufferedInputStream bin = <span class="keyword">new</span> BufferedInputStream(fin);</span><br><span class="line">            <span class="keyword">int</span> i;</span><br><span class="line">            <span class="keyword">while</span> ((i = bin.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">                System.out.print((<span class="keyword">char</span>) i);</span><br><span class="line">            &#125;</span><br><span class="line">            bin.close();</span><br><span class="line">            fin.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>testout.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javaTpoint.</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javaTpoint.</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -276,7 +295,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># Python 学习笔记</a>
+              <a href="/tags/Java-I-O/" rel="tag"># Java I/O</a>
           </div>
 
         
@@ -285,12 +304,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="Python 学习笔记（二）">
-      <i class="fa fa-chevron-left"></i> Python 学习笔记（二）
+    <a href="/2021/05/21/BufferedOutputStream/" rel="prev" title="BufferedOutputStream">
+      <i class="fa fa-chevron-left"></i> BufferedOutputStream
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/05/09/Python%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/" rel="next" title="Python 学习笔记（四）">
-      Python 学习笔记（四） <i class="fa fa-chevron-right"></i>
+    <a href="/2021/05/21/SequenceInputStream/" rel="next" title="SequenceInputStream">
+      SequenceInputStream <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -350,7 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.</span> <span class="nav-text">if 语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95"><span class="nav-number">1.1.</span> <span class="nav-text">条件测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E8%BE%93%E5%85%A5%E6%B5%81"><span class="nav-number">1.</span> <span class="nav-text">缓冲输入流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%A3%B0%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">类声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">类构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">5.</span> <span class="nav-text">示例</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
